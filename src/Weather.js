@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 const api = {
-    key: "d74cc8b71b7944bfc9add9cc8874cde7",
+    key: "YOUR API KEY",
     base: "https://api.openweathermap.org/data/2.5/"
 
 }
@@ -12,7 +12,7 @@ function Weather() {
 
     }, [])
     const sucess = async data => {
-        await fetch(`https://us1.locationiq.com/v1/reverse.php?key=pk.a6625897af005493033e2558ee228a9c&lat=18.5069&lon=73.8711&format=json`)
+        await fetch(`https://us1.locationiq.com/v1/reverse.php?key=pk.YOUR API KEY&lon=73.8711&format=json`)
             .then(res => res.json())
             .then(result => {
                 getDefaultWeather(result.address.city)
